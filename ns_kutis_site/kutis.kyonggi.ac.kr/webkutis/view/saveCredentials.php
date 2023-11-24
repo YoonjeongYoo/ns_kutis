@@ -1,8 +1,13 @@
 <?php
-// POST 요청으로부터 id와 pw를 받아옵니다.
-$id = isset($_POST['id']) ? $_POST['id'] : '';
-$pw = isset($_POST['pw']) ? $_POST['pw'] : '';
+// 서버에서 전송된 JSON 데이터를 읽습니다.
+$inputJSON = file_get_contents('php://input');
+$input = json_decode($inputJSON, true);
 
-// 받아온 id와 pw를 출력합니다. (실제 운영 환경에서는 이렇게 출력하지 않는 것이 안전합니다.)
-echo "ID: $id, PW: $pw";
+// ID와 PW를 출력합니다. (실제로는 이 정보를 데이터베이스에 저장하는 것이 안전합니다.)
+echo 'ID: ' . htmlspecialchars($input['id']) . '<br>';
+echo 'PW: ' . htmlspecialchars($input['pw']) . '<br>';
+
+// 실제로는 데이터를 저장하고 응답을 보낼 때는 JSON 형식으로 응답합니다.
+$response = array('message' => 'Credentials received successfully');
+echo json_encode($response);
 ?>
