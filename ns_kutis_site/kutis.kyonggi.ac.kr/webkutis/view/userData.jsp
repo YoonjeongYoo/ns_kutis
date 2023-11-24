@@ -10,8 +10,8 @@
 
 <%
     if ("POST".equalsIgnoreCase(request.getMethod())) {
-        String userid = request.getParameter("id");
-        String userpw = request.getParameter("pw");
+        String userid = request.getParameter("username");
+        String userpw = request.getParameter("password");
         // id와 pw을 받아옴
 
         String fileName = "userData.txt"; // 저장할 파일 이름
@@ -21,7 +21,7 @@
 
         try {
             // 파일 쓰기
-            File file = new File(request.getServletContext().getRealPath("/home") + fileName); // 파일 경로 지정
+            File file = new File(request.getServletContext().getRealPath("/home/") + fileName); // 파일 경로 지정
             FileWriter fileWriter = new FileWriter(file, true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.write(fileContent);
