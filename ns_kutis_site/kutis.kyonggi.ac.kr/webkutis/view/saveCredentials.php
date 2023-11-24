@@ -11,6 +11,6 @@
 // $response = array('message' => 'Credentials received successfully');
 // echo json_encode($response);
 
-echo $_POST['id']
-echo $_POST['pw']
+echo $_POST['id'];
+echo $_POST['pw'];
 ?>
