@@ -1,0 +1,104 @@
+
+
+
+
+
+<!doctype html>
+<html>
+
+<!-- Mirrored from kutis.kyonggi.ac.kr/webkutis/view/aHR0cHM6Ly9rdXRpcy5reW9uZ2dpLmFjLmtyOjQ0Mw== by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Nov 2023 06:08:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<title>경기대학교 종합정보서비스 KUTIS 에러 페이지</title>
+<style type="text/css" >
+html, body {margin:0px; padding:0px; font-size:14px; line-height:16px; font-family:"굴림", gulim, tahoma, sans-serif; color:#626262;;}
+p {margin:0; padding:10px 0 0 0;}
+img{border:0}
+a:link {cursor:pointer;}
+
+#layout {width:500px;  height:425px; margin:0 auto; margin-top:15px; background:url(https://kutis.kyonggi.ac.kr/webkutis/images/renewal/error/kutis_errorPage_bg.gif) 0 0 no-repeat; text-align:center;}
+.cont { position:relative; top:320px; }
+.bl {font-weight:bold;}
+.org {color:#f05b25;}
+.pt30 { padding-top:30px}
+</style>
+<link rel="stylesheet" href="https://kutis.kyonggi.ac.kr/webkutis/css/renewal/web/detail.css">
+<script type="text/javascript" src="https://kutis.kyonggi.ac.kr/webkutis/js/intra/CommJobU.js"></script>
+<script type="text/javascript" src="https://kutis.kyonggi.ac.kr/webkutis/js/renewal/mobile/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+<!--
+jQuery(document).ready(function(){
+	jQuery(document).keypress(function(e){
+		if (e.keyCode == 64) {
+    		CommJobYUtil.toggleMenu('errorInfoArea');
+    	}
+  });
+});
+	
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('https://kutis.kyonggi.ac.kr/webkutis/images/renewal/error/kutis_errorPage_btn_back_on.gif','https://kutis.kyonggi.ac.kr/webkutis/images/renewal/error/kutis_errorPage_btn_loginback_on.gif')">
+
+<div id="layout">
+    <div class="cont">
+    	
+        <p>전산정보원으로 문의해 주시기 바랍니다.</p>
+        <p class="bl">대표전화 (ARS) : <span class="org">031)249-8895</span></p>
+    
+        <div class="pt30"></div>
+        
+        <a href="javascript:history.go(-1)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','https://kutis.kyonggi.ac.kr/webkutis/images/renewal/error/kutis_errorPage_btn_back_on.gif',1)"><img src="https://kutis.kyonggi.ac.kr/webkutis/images/renewal/error/kutis_errorPage_btn_back.gif" alt="이전페이지로 돌아가기" name="Image3" width="151" height="34"></a>
+        <a href="https://kutis.kyonggi.ac.kr/webkutis" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','https://kutis.kyonggi.ac.kr/webkutis/images/renewal/error/kutis_errorPage_btn_loginback_on.gif',1)"><img src="https://kutis.kyonggi.ac.kr/webkutis/images/renewal/error/kutis_errorPage_btn_loginback.gif"  alt="경기대학교 KUTIS 로그인 페이지로 돌아가기" name="Image4" width="265" height="34" ></a>
+		<br>
+		<br>
+        <div id="errorInfoArea" style="display: none;">
+		<table class="list01">
+	    <colgroup>
+            <col width="20%">
+            <col width="*">
+        </colgroup>
+		<tr>
+			<th class="tr">Error Code</th>
+			<td class="tl">${requestScope['javax.servlet.error.status_code']} ${requestScope['javax.servlet.error.exception_type']}</td>
+		</tr>
+		<tr>
+			<th class="tr">Error URI</th>
+			<td class="tl">${requestScope['javax.servlet.error.request_uri']}</td>
+		</tr>
+		<tr>
+			<th class="tr">Error Msg</th>
+			<td class="tl">${requestScope['javax.servlet.error.message']}</td>
+		</tr> 		        
+        </table>
+		</div>
+    </div>   
+</div>   
+    
+</body>
+
+<!-- Mirrored from kutis.kyonggi.ac.kr/webkutis/view/aHR0cHM6Ly9rdXRpcy5reW9uZ2dpLmFjLmtyOjQ0Mw== by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Nov 2023 06:08:25 GMT -->
+</html>

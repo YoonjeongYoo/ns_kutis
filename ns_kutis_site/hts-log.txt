@@ -1,0 +1,11 @@
+HTTrack3.49-4+libhtsjava.so.2 launched on Tue, 21 Nov 2023 01:08:04 at https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp
+(winhttrack https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp -W -O "/home/nse_kutis" -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+
+HTTrack Website Copier/3.49-4 mirror complete in 21 seconds : 9 links scanned, 8 files written (45022 bytes overall) [48684 bytes received at 2318 bytes/sec], 4.5 requests per connection
+(No errors, 0 warnings, 0 messages)

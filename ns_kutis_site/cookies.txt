@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+kutis.kyonggi.ac.kr	TRUE	/webkutis	FALSE	1999999999	JSESSIONID	6DyGUtIbEKq4qiGN1KHVLl0tNuESazWBUnJ8B2h9WOhIlyIZnuqxZsRjb1veiyeb.kgu_p_servlet_engine3
+kutis.kyonggi.ac.kr	TRUE	/	FALSE	1999999999	WMONID	Gu1UeXPK3sU
+

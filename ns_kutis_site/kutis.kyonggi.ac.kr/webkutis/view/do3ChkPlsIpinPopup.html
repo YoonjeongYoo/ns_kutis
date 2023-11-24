@@ -1,0 +1,125 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Mirrored from kutis.kyonggi.ac.kr/webkutis/view/do3ChkPlsIpinPopup.jsp by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Nov 2023 06:08:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="stylesheet" href="https://kutis.kyonggi.ac.kr/webkutis/css/renewal/web/detail.css">
+<script type="text/javascript" src="https://kutis.kyonggi.ac.kr/webkutis/js/renewal/web/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="https://kutis.kyonggi.ac.kr/webkutis/js/intra/CommJobU.js"></script>
+<script type="text/javascript" src="https://kutis.kyonggi.ac.kr/webkutis/js/renewal/web/base.js"></script>
+<script type="text/javascript" src="https://kutis.kyonggi.ac.kr/webkutis/js/renewal/mobile/base64.js"></script>
+<script type="text/javascript" src="https://kutis.kyonggi.ac.kr/webkutis/js/renewal/web/CommKutis.js"></script>
+<script language="JavaScript" src="https://kutis.kyonggi.ac.kr/webkutis/js/yg/ygpage.js"></script>
+<link rel="stylesheet" type="text/css" href="https://kutis.kyonggi.ac.kr/webkutis/css/renewal/web/datepicker/jquery.ui.all.css">
+<script type="text/javascript" src="https://kutis.kyonggi.ac.kr/webkutis/js/renewal/web/jquery-ui-1.8.23.custom.min.js"></script>
+<!--[if lt IE 10]>
+<link type="text/css" rel="stylesheet" href="/webkutis/css/renewal/web/ie.css">
+<script type="text/javascript" src="/webkutis/js/renewal/web/html5.js"></script>
+<script type="text/javascript" src="/webkutis/js/renewal/web/baseIE.js"></script>
+<![endif]-->
+
+<script>
+	jQuery(function () {
+		//bg 높이 스크롤포함 총높이로 조정
+		jQuery(document).ready(function() {
+	        var scroll_height = document.body.scrollHeight - 40;
+	        scroll_height = scroll_height + "px";
+	        jQuery(".bg").css("height", scroll_height);
+			/*
+	        // 팝업스크롤 가로 width 조정
+	        var scroll_width = document.body.scrollWidth;
+	        if(parent.document.body.scrollWidth != "undefind"){
+	        	scroll_width = parent.document.body.scrollWidth + "px";
+	        }
+	        scroll_width = scroll_width + "px";
+	        jQuery(".wrapper").css("width", scroll_width); */
+	    });
+	});
+</script>
+
+
+<html>
+<head>
+	<title>개인정보확인</title>
+	<script type="text/javascript">
+	window.name ="Parent_window";
+		
+	function chkPlusPopup(){
+		window.open('', 'popupIPIN2', 'width=450, height=550, top=100, left=100, fullscreen=no, menubar=no, status=no, toolbar=no, titlebar=yes, location=no, scrollbar=no');
+		document.form_ipin.target = "popupIPIN2";
+		document.form_ipin.action = "https://cert.vno.co.kr/ipin.cb";
+		document.form_ipin.submit();
+	}
+	
+	function doClose() {
+		self.close();
+	}
+	</script>
+</head>
+<body>
+<script type="text/javascript">		
+	function closeLayer(){
+		parent.popLayer07.style.display = "none";
+	}
+</script>
+</HEAD>
+
+<body onload="self.focus();">
+<div class="popLayer07" style="display:block;">
+	  <div class="wrapper"  id="is_croll">
+	     <div class="mid" >
+	        <div class="con" >
+	        	<section class="hgroup">
+	            	<p>아이핀인증서비스이용</p>
+	          	</section>
+	          	<section class="cnts">	 
+	<br><br>
+				<p><span class="btn-common"><span><a href="javascript:chkPlusPopup();">아이핀으로 개인정보확인하기</a></span></span></p>
+				<!-- //기본정보 -->
+				<a href="javascript:closeLayer();" class="close_ico close"><img src="https://kutis.kyonggi.ac.kr/webkutis/images/renewal/web/etc/close_ico.png" alt="닫기" /></a>
+				</section>	
+	        </div><!-- //con -->        
+	      </div><!-- //mid -->
+	     <!--<div class="btm"><div class="left"></div><div class="right"></div><div class="cen"></div></div>-->
+	  </div><!-- //wrap -->  
+</div>
+
+<!-- 가상주민번호 서비스 팝업을 호출하기 위해서는 다음과 같은 form이 필요합니다. -->
+<form name="form_ipin" method="post">
+	<input type="hidden" name="m" value="pubmain">						<!-- 필수 데이타로, 누락하시면 안됩니다. -->
+    <input type="hidden" name="enc_data" value="AgAEQUsyMy7kbLmsUzyDodU0ZVHtgQ8DnDUTx606ll+1LtxNLOo9/EvlM8MIivsNJYGdFQ7J0exljuVTDA1xzcVzoFhIsaDlLm31rC17jKgL/HUnafs+OT6J5qcuk1LBvBWxkdFteAsDRdsJDE4GRYT+Qx9cDPR/zbRV37uvhZfQURQP95ARKacL/sttx4bL5JUaGFH7erIq7AaTt8lDBIzrHsE4wlNNsim4mNNLjhS/yvINByorkPqpSut5DbNOR4yGQgXFuWswyV10wY+9wFmSM6vcE/jEwpj8vr0/x55RQ/4vUdHjHxyPRTRtrAHzjOQh9H1oDg==">		<!-- 위에서 업체정보를 암호화 한 데이타입니다. -->
+    
+    <!-- 업체에서 응답받기 원하는 데이타를 설정하기 위해 사용할 수 있으며, 인증결과 응답시 해당 값을 그대로 송신합니다.
+    	 해당 파라미터는 추가하실 수 없습니다. -->
+    <input type="hidden" name="param_r1" value="">
+    <input type="hidden" name="param_r2" value="">
+    <input type="hidden" name="param_r3" value="">
+</form>
+
+<!-- 가상주민번호 서비스 팝업 페이지에서 사용자가 인증을 받으면 암호화된 사용자 정보는 해당 팝업창으로 받게됩니다.
+	 따라서 부모 페이지로 이동하기 위해서는 다음과 같은 form이 필요합니다. -->
+<form name="vnoform" method="post">
+	<input type="hidden" name="enc_data">								<!-- 인증받은 사용자 정보 암호화 데이타입니다. -->
+	
+	<!-- 업체에서 응답받기 원하는 데이타를 설정하기 위해 사용할 수 있으며, 인증결과 응답시 해당 값을 그대로 송신합니다.
+    	 해당 파라미터는 추가하실 수 없습니다. -->
+    <input type="hidden" name="param_r1" value="">
+    <input type="hidden" name="param_r2" value="">
+    <input type="hidden" name="param_r3" value="">
+</form>
+				
+</body>
+
+<!-- Mirrored from kutis.kyonggi.ac.kr/webkutis/view/do3ChkPlsIpinPopup.jsp by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Nov 2023 06:08:25 GMT -->
+</html>

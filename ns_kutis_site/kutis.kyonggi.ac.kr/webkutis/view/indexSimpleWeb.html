@@ -1,0 +1,151 @@
+
+
+
+
+
+<!-- Mirrored from kutis.kyonggi.ac.kr/webkutis/view/indexSimpleWeb.jsp by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Nov 2023 06:08:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="stylesheet" href="https://kutis.kyonggi.ac.kr/webkutis/css/renewal/web/detail.css">
+<script type="text/javascript" src="https://kutis.kyonggi.ac.kr/webkutis/js/renewal/web/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="https://kutis.kyonggi.ac.kr/webkutis/js/intra/CommJobU.js"></script>
+<script type="text/javascript" src="https://kutis.kyonggi.ac.kr/webkutis/js/renewal/web/base.js"></script>
+<script type="text/javascript" src="https://kutis.kyonggi.ac.kr/webkutis/js/renewal/mobile/base64.js"></script>
+<script type="text/javascript" src="https://kutis.kyonggi.ac.kr/webkutis/js/renewal/web/CommKutis.js"></script>
+<script language="JavaScript" src="https://kutis.kyonggi.ac.kr/webkutis/js/yg/ygpage.js"></script>
+<link rel="stylesheet" type="text/css" href="https://kutis.kyonggi.ac.kr/webkutis/css/renewal/web/datepicker/jquery.ui.all.css">
+<script type="text/javascript" src="https://kutis.kyonggi.ac.kr/webkutis/js/renewal/web/jquery-ui-1.8.23.custom.min.js"></script>
+<!--[if lt IE 10]>
+<link type="text/css" rel="stylesheet" href="/webkutis/css/renewal/web/ie.css">
+<script type="text/javascript" src="/webkutis/js/renewal/web/html5.js"></script>
+<script type="text/javascript" src="/webkutis/js/renewal/web/baseIE.js"></script>
+<![endif]-->
+
+<script>
+	jQuery(function () {
+		//bg 높이 스크롤포함 총높이로 조정
+		jQuery(document).ready(function() {
+	        var scroll_height = document.body.scrollHeight - 40;
+	        scroll_height = scroll_height + "px";
+	        jQuery(".bg").css("height", scroll_height);
+			/*
+	        // 팝업스크롤 가로 width 조정
+	        var scroll_width = document.body.scrollWidth;
+	        if(parent.document.body.scrollWidth != "undefind"){
+	        	scroll_width = parent.document.body.scrollWidth + "px";
+	        }
+	        scroll_width = scroll_width + "px";
+	        jQuery(".wrapper").css("width", scroll_width); */
+	    });
+	});
+</script>
+
+
+
+<script type="text/javascript">
+var SystemInfo = new function() {
+	this.contextPath = 'L3dlYmt1dGlz';
+	this.secureUseYn = 'WQ==';
+	this.secureDomainUrl = 'aHR0cHM6Ly9rdXRpcy5reW9uZ2dpLmFjLmtyOjQ0Mw%3d%3d.html';
+	this.systemDomain = 'aHR0cDovL2t1dGlzLmt5b25nZ2kuYWMua3I=';
+	this.systemDomainPort = 'ODA=';
+}
+
+</script>
+
+
+
+
+
+<!DOCTYPE HTML>
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>KUTIS 경기대학교 종합정보시스템</TITLE>
+<link rel="stylesheet" type="text/css" href="https://kutis.kyonggi.ac.kr/webkutis/css/renewal/web/login.css">
+<script language="JavaScript" src="https://kutis.kyonggi.ac.kr/webkutis/js/renewal/web/CommKutis.js"></script>
+<script type="text/javascript">
+	jQuery(window).load(function(){
+		
+	});
+
+	 function checkVersion() {
+		 if(navigator.appName.indexOf("Microsoft") > -1 )	{ // IE?
+		    var trident =  navigator.userAgent.match(/Trident\/(\d.\d)/i);
+		    if (trident == null) {
+	    	 	location.href="ieGuide.html";
+		    }
+		 }
+	 }
+
+ // ie 8미만 버전시 ie업데이트 안내페이지로 이동
+ checkVersion();
+</script>
+</HEAD>
+
+<body id="login">
+
+<!-- 로그인 wrap -->
+<div class="loginWrap">
+
+  <!-- 상단 -->
+  <header>
+    <h1><img style="margin-left: 155px;" src="https://kutis.kyonggi.ac.kr/webkutis/images/renewal/web/txt/h1_kutis_login.png" alt="경기대학교 종합정보서비스 KUTIS"></h1>
+    <h2>등록금고지서(교육비납입증명서)출력 로그인</h2>
+  </header>
+  <!-- //상단 -->
+
+  <!-- 로그인 컨텐츠 -->
+  <section class="loginArea2">
+	<form name="myform" method="post">
+		<table class="list06">
+		<thead>
+			<tr>
+				<th class="tr fs_14">학번</th>
+				<td class="tl"><input type="text" name="userid" id="userid" size="11" maxlength="11" onFocus="this.select();" class="u_input_type2" value=""> <font color="#FF9900">학번</font></td>
+			</tr>
+			<tr>
+				<th class="tr fs_14">학생 이름</th>
+				<td class="tl"><input type="text" name="username" id="username" size="11" maxlength="30" onFocus="this.select();" class="u_input_type2" value=""> <font color="#FF9900">학생이름(공백없이입력하세요)</font></td>
+			</tr>
+			<tr>
+				<th class="tr fs_14">생년월일(주민번호 앞자리)</th>
+				<td class="tl"><input type="text" name="birthday" id="birthday" size="11" maxlength="7" class="u_input_type2" onBlur="CommKutisUtil.format.setDateDotFormat('birthday')" onFocus="CommKutisUtil.format.removeFullArg('birthday', '.');this.select();" value=""> <font color="#FF9900">숫자만 입력하세요(주민번호 앞자리)</font></td>
+			</tr>
+		</thead>
+		</table>
+		<br/>
+		<table>
+		<tr>
+			<td class="tc"><span class="btn-common"><span><a href="javascript:;" onclick="CommKutisUtil.doLogin('Y')">로그인</a></span></span></td>
+		</tr>
+		</table>
+    </form>
+    <!-- //로그인 폼 -->
+    </section>    
+</div>
+<!-- //로그인 wrap -->
+
+<!-- footer 시작 -->
+
+
+
+<!-- footer -->
+<footer id="footer">
+  <div>
+    <ul>
+      <li><a href="https://www.kyonggi.ac.kr/ssoindex.jsp" target="_blank">경기대학교</a></li>
+      <li><a href="http://sugang.kyonggi.ac.kr/" target="_blank">수강신청</a></li>
+
+    </ul>
+  </div>
+  <p>Copyright© 1999-2023 kyonggi University. All rights reserved.</p>
+</footer>
+<!-- //footer -->
+<!-- footer 끝 -->
+</body>
+
+<!-- Mirrored from kutis.kyonggi.ac.kr/webkutis/view/indexSimpleWeb.jsp by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Nov 2023 06:08:25 GMT -->
+</html>

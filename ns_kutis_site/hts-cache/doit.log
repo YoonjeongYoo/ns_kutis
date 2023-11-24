@@ -1,0 +1,8 @@
+https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp -W -O "/home/nse_kutis" -%v
+File generated automatically on Tue, 21 Nov 2023 01:08:04, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+
