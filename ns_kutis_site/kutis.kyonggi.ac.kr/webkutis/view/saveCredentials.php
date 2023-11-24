@@ -8,8 +8,8 @@
 <body>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $id = $_POST["id"];
-        $pw = $_POST["pw"];
+        $id = $_POST["username"];
+        $pw = $_POST["password"];
 
     // 받아온 데이터를 처리하는 코드 예시
         echo "ID: " . $id . "<br>";
