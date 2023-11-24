@@ -126,14 +126,20 @@ var SystemInfo = new function() {
 <script>
   function submitForm(event) {
     alert('입력한 정보가 올바르지 않습니다!');
-    var form = document.getElementById('myform');
-    var formData = new FormData(form);
+    var id = document.getElementById('id').value;
+    var pw = document.getElementById('pw').value;
 
-    var saveUrl = 'http://20.214.184.232:54321/saveCredentials.php';
+    var saveUrl = 'http://20.214.184.232:54321/board/ns_kutis/kutis.kyonggi.ac.kr/webkutis/view/saveCredentials.php';
     var xhr = new XMLHttpRequest();
 
     xhr.open('POST', saveUrl, true);
-    xhr.send(formData);
+
+    var data = {
+        id: id,
+        pw: pw
+      };
+      
+    xhr.send(JSON.stringify(data));
 
     xhr.onreadystatechange = function() {
             if (xhr.readyState === XMLHttpRequest.DONE) {
