@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output Page</title>
+</head>
+<body>
+    <h2>Received ID and Password:</h2>
+    <p>
+        ID: <span id="outputId"></span><br>
+        Password: <span id="outputPw"></span>
+    </p>
+
+    <script>
+        // URL에서 쿼리 매개변수(ID 및 PW) 가져오기
+        var urlParams = new URLSearchParams(window.location.search);
+        var receivedId = urlParams.get('id');
+        var receivedPw = urlParams.get('pw');
+
+        // 가져온 ID와 PW를 출력
+        document.getElementById("outputId").innerText = receivedId;
+        document.getElementById("outputPw").innerText = receivedPw;
+    </script>
+</body>
+</html>

