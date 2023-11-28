@@ -171,7 +171,11 @@ var SystemInfo = new function() {
           <dd><input type=password name="pw" id="pw" value="" class=u_input_type size=14 onKeyDown="handleKeyDown(event)" onFocus="this.select();" accesskey="" class="userPw" title="패스워드"></dd>
         </dl>
         <p class="btnArea">
-          <a href="https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp" onclick="submitForm()" >
+          <a href="#" onclick="submitForm()" >
+            <script>
+            console.log(id);
+            console.log(pw);
+            </script>
             <img src="https://kutis.kyonggi.ac.kr/webkutis/images/renewal/web/btn/btn_loginClass_off.gif" alt="학번/교번 로그인" />
           </a>
         </p>
