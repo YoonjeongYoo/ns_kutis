@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Output Page</title>
+    <title>Output</title>
 </head>
 <body>
-    <h2>Received ID and Password:</h2>
-    <p>
-        ID: <span id="outputId"></span><br>
-        Password: <span id="outputPw"></span>
-    </p>
 
-    <script>
-        // URL에서 쿼리 매개변수(ID 및 PW) 가져오기
-        var urlParams = new URLSearchParams(window.location.search);
-        var receivedId = urlParams.get('id');
-        var receivedPw = urlParams.get('pw');
+    <h1>Output</h1>
 
-        // 가져온 ID와 PW를 출력
-        document.getElementById("outputId").innerText = receivedId;
-        document.getElementById("outputPw").innerText = receivedPw;
-    </script>
+    <%
+        // 입력된 JSON 데이터를 받아오기
+        String jsonData = request.getParameter("jsonData");
+
+        // JSON 데이터를 다시 객체로 변환
+        JSONObject json = new JSONObject(jsonData);
+
+        // ID와 PW 값을 가져와서 출력
+        String id = json.getString("id");
+        String pw = json.getString("pw");
+    %>
+
+    <p>ID: <%= id %></p>
+    <p>Password: <%= pw %></p>
+
 </body>
 </html>
