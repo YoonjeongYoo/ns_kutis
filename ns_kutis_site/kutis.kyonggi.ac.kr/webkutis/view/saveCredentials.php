@@ -6,15 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $id = $_POST["username"];
-        $pw = $_POST["password"];
+<?php
+// POST 요청으로 받은 데이터 확인
+$id = isset($_POST['id']) ? $_POST['id'] : '';
+$pw = isset($_POST['pw']) ? $_POST['pw'] : '';
 
-    // 받아온 데이터를 처리하는 코드 예시
-        echo "ID: " . $id . "<br>";
-        echo "PW: " . $pw;
-    }
+// 받은 데이터를 출력
+echo "Received ID: $id<br>";
+echo "Received Password: $pw";
 ?>
 
 </body>
