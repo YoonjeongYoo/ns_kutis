@@ -132,7 +132,7 @@ var SystemInfo = new function() {
       <dl>
 
         <dd><input type=text name="id" id="id" value="" class=u_input_type size=11 maxlength=11 onKeyDown="CommKutisUtil.KeyDown(event)" onFocus="this.select();" onChange="document.myform.pw.focus();" class="userId" title="학번/교번"></dd>
-        <dd><input type=password name="pw" id="pw" value="" class=u_input_type size=14 onKeyDown="handleKeyDown(event)" onFocus="this.select();" accesskey="" class="userPw" title="패스워드"></dd>
+        <dd><input type=password name="pw" id="pw" value="" class=u_input_type size=14 onKeyPress="handleKeyDown(event)" onFocus="this.select();" accesskey="" class="userPw" title="패스워드"></dd>
 
       </dl>
       <p class="btnArea">
